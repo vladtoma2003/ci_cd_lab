@@ -6,7 +6,7 @@ on:
       - main
 
 jobs:
-   test:
+  test:
     runs-on: ubuntu-latest
     steps:
       - name: Checkout code
@@ -21,7 +21,7 @@ jobs:
         run: go mod download
 
       - name: Run tests
-        run: go test
+        run: go test ./main_test.go
 
   compile:
     runs-on: ubuntu-latest
